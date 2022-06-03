@@ -47,10 +47,10 @@ switch (uname)
             git checkout "(git describe --abbrev=0 --tags)"
         end
     case Linux
-        sudo apt-get update
-        if not dpkg -s build-essential
-            sudo apt-get install build-essential
-        end
+        # sudo apt-get update
+        # if not dpkg -s build-essential
+        #     sudo apt-get install build-essential
+        # end
         if not type -q hub
             wget -O hub.tgz https://github.com/github/hub/releases/download/v2.14.2/hub-linux-amd64-2.14.2.tgz
             tar zxvf hub.tgz
